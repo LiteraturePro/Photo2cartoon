@@ -42,23 +42,26 @@ def api():
     output_img_path = os.path.join('./output', img_name + ".png")
     
     test_onnx.main(input_img_path,output_img_path)
-
-    with open(output_img_path, 'rb') as f:
-      res = base64.b64encode(f.read())
+    
     if os.path.exists(input_img_path):  # 如果文件存在
       os.remove(input_img_path)  
     else:
       logging.error('no such file')  # 则返回文件不存在
-    if os.path.exists(output_img_path):  # 如果文件存在
-      os.remove(output_img_path)  
-    else:
-      logging.error('no such file')  # 则返回文件不存在
-    return res
+    try:
+        with open(output_img_path, 'rb') as f:
+          res = base64.b64encode(f.read())
+        if os.path.exists(output_img_path):  # 如果文件存在
+          os.remove(output_img_path)  
+        else:
+          logging.error('no such file')  # 则返回文件不存在
+        return res
+    except Exception as e:
+        return "未识别到人脸"
   except Exception as e:
     print(e)
     return "errorError occurred, please check the log output！"
 
 
 if __name__ == "__main__":
-    app.run(debug=False, host='0.0.0.0', port=int(os.environ.get('PORT', 5000)))
+    app.run(debug=False, host='0.0.0.0', port=int(os.environ.get('PORT', 9000)))
     #app.run()
