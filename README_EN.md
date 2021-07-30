@@ -6,13 +6,6 @@
 
 [中文版](README.md) | English Version
 
-[Minivision](https://www.minivision.cn/)'s photo-to-cartoon translation project is opened source in this repo, you can try our WeChat mini program "AI Cartoon Show" via scanning the QR code below.
-
-<div>
-  <img src='./images/QRcode.jpg' height='150px' width='150px'>
-</div>
-
-You can also try on this page: [https://ai.minivision.cn/#/coreability/cartoon](https://ai.minivision.cn/#/coreability/cartoon)
 
 **Updates**
 - `2020.12.2`: [photo2cartoon-paddle](https://github.com/minivision-ai/photo2cartoon-paddle) is released。
