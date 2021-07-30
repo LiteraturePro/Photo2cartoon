@@ -27,4 +27,4 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Run Build Docker images
-        run: docker build -t Photo2cartoon .
+        run: docker build -t photo2cartoon .
