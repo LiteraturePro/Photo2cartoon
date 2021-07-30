@@ -6,16 +6,6 @@
 
 **中文版** | [English Version](README_EN.md)
 
-该项目为[小视科技](https://www.minivision.cn/)卡通肖像探索项目。您可使用微信扫描下方二维码或搜索“AI卡通秀”小程序体验卡通化效果。
-
-<div>
-  <img src='./images/QRcode.jpg' height='150px' width='150px'>
-</div>
-
-也可以前往我们的ai开放平台进行在线体验：[https://ai.minivision.cn/#/coreability/cartoon](https://ai.minivision.cn/#/coreability/cartoon)
-
-技术交流QQ群：937627932
-
 **Updates**
 - `2020.12.2`: 开源基于paddlepaddle的项目[photo2cartoon-paddle](https://github.com/minivision-ai/photo2cartoon-paddle)。
 - `2020.12.1`: 增加onnx测试模型, 详情请见 [test_onnx.py](./test_onnx.py)。
@@ -148,9 +138,6 @@ A：实验中我们发现，使用自研的识别模型计算Face ID Loss训练�
 
 #### Q：人像分割模型是否能用与分割半身像？
 A：不能。该模型是针对本项目训练的专用模型，需先裁剪出人脸区域再输入。
-
-## Tips
-我们开源的模型是基于亚洲年轻女性训练的，对于其他人群覆盖不足，您可根据使用场景自行收集相应人群的数据进行训练。我们的[开放平台](https://ai.minivision.cn/#/coreability/cartoon)提供了能够覆盖各类人群的卡通化服务，您可前往体验。如有定制卡通风格需求请联系商务:18852075216。
 
 ## 参考
 U-GAT-IT: Unsupervised Generative Attentional Networks with Adaptive Layer-Instance Normalization for Image-to-Image Translation [[Paper](https://arxiv.org/abs/1907.10830)][[Code](https://github.com/znxlwm/UGATIT-pytorch)]
